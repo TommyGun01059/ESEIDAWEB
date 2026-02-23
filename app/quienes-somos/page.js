@@ -1,27 +1,26 @@
-export const metadata = {
-    title: 'Quiénes Somos - ESEIDA',
-    description: 'Conoce a la Delegación de Alumnos de la ESEI y nuestra misión',
-};
+'use client';
+
+import { Target, Handshake, Lightbulb, Sparkles, ClipboardList, PartyPopper, LifeBuoy, Megaphone, Users } from 'lucide-react';
 
 export default function QuienesSomosPage() {
     const valores = [
         {
-            icon: '🎯',
+            icon: <Target size={32} />,
             title: 'Representación',
             description: 'Damos voz a todos los estudiantes en los órganos de gobierno.'
         },
         {
-            icon: '🤝',
+            icon: <Handshake size={32} />,
             title: 'Compromiso',
             description: 'Trabajamos cada día por mejorar la experiencia universitaria.'
         },
         {
-            icon: '💡',
+            icon: <Lightbulb size={32} />,
             title: 'Innovación',
             description: 'Buscamos nuevas formas de conectar con el alumnado.'
         },
         {
-            icon: '🌟',
+            icon: <Sparkles size={32} />,
             title: 'Transparencia',
             description: 'Actuamos con honestidad y rendimos cuentas a los estudiantes.'
         }
@@ -59,7 +58,7 @@ export default function QuienesSomosPage() {
                             </p>
                         </div>
                         <div className="about-image">
-                            👥
+                            <Users size={80} strokeWidth={1.5} />
                         </div>
                     </div>
                 </div>
@@ -92,7 +91,9 @@ export default function QuienesSomosPage() {
 
                     <div className="grid-2">
                         <div className="card">
-                            <h4 style={{ marginBottom: 'var(--spacing-md)' }}>📋 Representación Estudiantil</h4>
+                            <h4 style={{ marginBottom: 'var(--spacing-md)', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                                <ClipboardList size={20} /> Representación Estudiantil
+                            </h4>
                             <p>
                                 Participamos en la Junta de Centro, comisiones académicas y otros órganos
                                 de gobierno para llevar tu voz a donde se toman las decisiones.
@@ -100,7 +101,9 @@ export default function QuienesSomosPage() {
                         </div>
 
                         <div className="card">
-                            <h4 style={{ marginBottom: 'var(--spacing-md)' }}>🎉 Organización de Eventos</h4>
+                            <h4 style={{ marginBottom: 'var(--spacing-md)', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                                <PartyPopper size={20} /> Organización de Eventos
+                            </h4>
                             <p>
                                 Planificamos actividades culturales, deportivas y sociales que
                                 fomentan la convivencia y hacen más amena la vida universitaria.
@@ -108,7 +111,9 @@ export default function QuienesSomosPage() {
                         </div>
 
                         <div className="card">
-                            <h4 style={{ marginBottom: 'var(--spacing-md)' }}>🆘 Atención al Alumnado</h4>
+                            <h4 style={{ marginBottom: 'var(--spacing-md)', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                                <LifeBuoy size={20} /> Atención al Alumnado
+                            </h4>
                             <p>
                                 Resolvemos dudas, ayudamos con trámites y orientamos a los estudiantes
                                 en todo lo relacionado con su vida académica.
@@ -116,7 +121,9 @@ export default function QuienesSomosPage() {
                         </div>
 
                         <div className="card">
-                            <h4 style={{ marginBottom: 'var(--spacing-md)' }}>📢 Comunicación</h4>
+                            <h4 style={{ marginBottom: 'var(--spacing-md)', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                                <Megaphone size={20} /> Comunicación
+                            </h4>
                             <p>
                                 Mantenemos informado al alumnado de noticias, cambios y oportunidades
                                 relevantes a través de nuestros canales de comunicación.

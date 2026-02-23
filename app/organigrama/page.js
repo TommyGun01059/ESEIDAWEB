@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { Mail, CalendarDays, User, Send } from 'lucide-react';
 
 function MemberCard({ member, isExpanded, onToggle }) {
     return (
@@ -18,7 +19,7 @@ function MemberCard({ member, isExpanded, onToggle }) {
                         alt={member.name}
                         onError={(e) => {
                             e.target.style.display = 'none';
-                            e.target.parentElement.innerHTML = '<span class="member-photo-placeholder">👤</span>';
+                            e.target.parentElement.innerHTML = '<span class="member-photo-placeholder"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>';
                         }}
                     />
                 </div>
@@ -31,7 +32,7 @@ function MemberCard({ member, isExpanded, onToggle }) {
                         className="contact-item"
                         onClick={(e) => e.stopPropagation()}
                     >
-                        <span className="contact-icon">✉️</span>
+                        <span className="contact-icon"><Mail size={16} /></span>
                         <span>{member.email}</span>
                     </a>
                     {member.agenda_url && (
@@ -42,7 +43,7 @@ function MemberCard({ member, isExpanded, onToggle }) {
                             className="contact-item"
                             onClick={(e) => e.stopPropagation()}
                         >
-                            <span className="contact-icon">📅</span>
+                            <span className="contact-icon"><CalendarDays size={16} /></span>
                             <span>Agenda Pública</span>
                         </a>
                     )}
@@ -156,8 +157,8 @@ export default function OrganigramaPage() {
                             Si te interesa participar en la delegación, contacta con nosotros.
                             ¡Siempre buscamos personas comprometidas!
                         </p>
-                        <a href="mailto:eseida@uvigo.gal" className="btn btn-primary">
-                            ✉️ Contactar
+                        <a href="mailto:eseida@uvigo.gal" className="btn btn-primary" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
+                            <Send size={16} /> Contactar
                         </a>
                     </div>
                 </div>

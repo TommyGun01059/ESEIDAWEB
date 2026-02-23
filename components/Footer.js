@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { Instagram, Mail, MapPin, Twitter } from 'lucide-react';
 
 export default function Footer() {
     const currentYear = new Date().getFullYear();
@@ -55,7 +56,7 @@ export default function Footer() {
                                 className="social-link"
                                 aria-label="Twitter"
                             >
-                                𝕏
+                                <Twitter size={18} />
                             </a>
                             <a
                                 href="https://instagram.com/eseida"
@@ -64,14 +65,14 @@ export default function Footer() {
                                 className="social-link"
                                 aria-label="Instagram"
                             >
-                                📷
+                                <Instagram size={18} />
                             </a>
                             <a
                                 href="mailto:eseida@uvigo.gal"
                                 className="social-link"
                                 aria-label="Email"
                             >
-                                ✉️
+                                <Mail size={18} />
                             </a>
                         </div>
                     </div>
@@ -116,11 +117,11 @@ export default function Footer() {
                     <div className="footer-column">
                         <h4>Contacto</h4>
                         <div className="footer-contact-item">
-                            <span className="icon">📍</span>
+                            <span className="icon"><MapPin size={16} /></span>
                             <span>ESEI, Campus de Ourense<br />Universidad de Vigo</span>
                         </div>
                         <div className="footer-contact-item">
-                            <span className="icon">✉️</span>
+                            <span className="icon"><Mail size={16} /></span>
                             <span>eseida@uvigo.gal</span>
                         </div>
                     </div>

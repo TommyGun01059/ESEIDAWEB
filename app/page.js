@@ -1,4 +1,7 @@
+'use client';
+
 import Link from 'next/link';
+import { GraduationCap, Megaphone, PartyPopper, Handshake, Users, Calendar } from 'lucide-react';
 
 export default function Home() {
     return (
@@ -7,7 +10,7 @@ export default function Home() {
             <section className="hero">
                 <div className="hero-content">
                     <div className="hero-badge">
-                        <span>🎓</span>
+                        <GraduationCap size={18} />
                         <span>Delegación de Alumnos ESEI</span>
                     </div>
 
@@ -34,21 +37,31 @@ export default function Home() {
                             rel="noopener noreferrer"
                             className="btn btn-outline"
                         >
-                            🎓 Ir a ESEI
+                            <GraduationCap size={16} style={{ marginRight: '6px', verticalAlign: 'middle' }} />
+                            Ir a ESEI
                         </a>
                     </div>
 
                     <div className="hero-stats">
                         <div className="stat-item">
-                            <div className="stat-number">1000+</div>
+                            <div className="stat-number">
+                                <Users size={20} style={{ marginRight: '6px', verticalAlign: 'middle' }} />
+                                1000+
+                            </div>
                             <div className="stat-label">Estudiantes representados</div>
                         </div>
                         <div className="stat-item">
-                            <div className="stat-number">15+</div>
+                            <div className="stat-number">
+                                <Calendar size={20} style={{ marginRight: '6px', verticalAlign: 'middle' }} />
+                                15+
+                            </div>
                             <div className="stat-label">Eventos anuales</div>
                         </div>
                         <div className="stat-item">
-                            <div className="stat-number">10+</div>
+                            <div className="stat-number">
+                                <Handshake size={20} style={{ marginRight: '6px', verticalAlign: 'middle' }} />
+                                10+
+                            </div>
                             <div className="stat-label">Delegados activos</div>
                         </div>
                     </div>
@@ -67,7 +80,7 @@ export default function Home() {
 
                     <div className="grid-3">
                         <div className="card">
-                            <div className="value-icon">📢</div>
+                            <div className="value-icon"><Megaphone size={32} /></div>
                             <h3 className="value-title">Representación</h3>
                             <p className="value-description">
                                 Llevamos tu voz a los órganos de gobierno de la facultad y la universidad.
@@ -75,7 +88,7 @@ export default function Home() {
                         </div>
 
                         <div className="card">
-                            <div className="value-icon">🎉</div>
+                            <div className="value-icon"><PartyPopper size={32} /></div>
                             <h3 className="value-title">Eventos</h3>
                             <p className="value-description">
                                 Organizamos actividades culturales, deportivas y sociales para toda la comunidad.
@@ -83,7 +96,7 @@ export default function Home() {
                         </div>
 
                         <div className="card">
-                            <div className="value-icon">🤝</div>
+                            <div className="value-icon"><Handshake size={32} /></div>
                             <h3 className="value-title">Apoyo</h3>
                             <p className="value-description">
                                 Te ayudamos con trámites, dudas y cualquier problema que tengas en tu vida universitaria.

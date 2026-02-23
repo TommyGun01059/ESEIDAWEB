@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import { Lightbulb, AlertTriangle, HelpCircle, Ticket, Handshake, Mail, Send, Loader2 } from 'lucide-react';
 
 export default function FormulariosPage() {
     const [formData, setFormData] = useState({
@@ -19,37 +20,37 @@ export default function FormulariosPage() {
         {
             title: 'Sugerencias y Propuestas',
             description: '¿Tienes ideas para mejorar la ESEI? Cuéntanoslas y trabajaremos para llevarlas a cabo.',
-            icon: '💡',
+            icon: <Lightbulb size={28} />,
             link: '#formulario'
         },
         {
             title: 'Quejas y Reclamaciones',
             description: 'Si algo no funciona como debería, queremos saberlo para poder solucionarlo.',
-            icon: '⚠️',
+            icon: <AlertTriangle size={28} />,
             link: '#formulario'
         },
         {
             title: 'Solicitud de Información',
             description: '¿Necesitas información sobre trámites, normativas o servicios? Pregúntanos.',
-            icon: '❓',
+            icon: <HelpCircle size={28} />,
             link: '#formulario'
         },
         {
             title: 'Inscripción a Eventos',
             description: 'Apúntate a los eventos y actividades organizados por ESEIDA.',
-            icon: '🎟️',
+            icon: <Ticket size={28} />,
             link: '/eventos'
         },
         {
             title: 'Colaboración',
             description: '¿Quieres colaborar con la delegación o proponer una actividad conjunta?',
-            icon: '🤝',
+            icon: <Handshake size={28} />,
             link: '#formulario'
         },
         {
             title: 'Contacto General',
             description: 'Para cualquier otra consulta que no encaje en las categorías anteriores.',
-            icon: '✉️',
+            icon: <Mail size={28} />,
             link: '#formulario'
         }
     ];
@@ -219,7 +220,7 @@ export default function FormulariosPage() {
                                 style={{ minWidth: '200px' }}
                                 disabled={submitting}
                             >
-                                {submitting ? '⏳ Enviando...' : '📨 Enviar mensaje'}
+                                {submitting ? <><Loader2 size={16} className="spin-icon" /> Enviando...</> : <><Send size={16} /> Enviar mensaje</>}
                             </button>
                         </div>
                     </form>
