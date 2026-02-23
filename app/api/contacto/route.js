@@ -1,8 +1,16 @@
-import { supabase } from '@/lib/supabase';
+import { getSupabase } from '@/lib/supabase';
 import { NextResponse } from 'next/server';
 
 export async function POST(request) {
     try {
+        const supabase = getSupabase();
+        if (!supabase) {
+            return NextResponse.json(
+                { error: 'Servicio no disponible' },
+                { status: 503 }
+            );
+        }
+
         const body = await request.json();
         const { nombre, email, asunto, mensaje } = body;
 
@@ -42,3 +50,4 @@ export async function POST(request) {
         );
     }
 }
+

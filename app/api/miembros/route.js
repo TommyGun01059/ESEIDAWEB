@@ -1,8 +1,13 @@
-import { supabase } from '@/lib/supabase';
+import { getSupabase } from '@/lib/supabase';
 import { NextResponse } from 'next/server';
 
 export async function GET() {
     try {
+        const supabase = getSupabase();
+        if (!supabase) {
+            return NextResponse.json({ juntaDirectiva: [], delegados: [] });
+        }
+
         const { data, error } = await supabase
             .from('miembros')
             .select('*')
@@ -10,7 +15,6 @@ export async function GET() {
 
         if (error) throw error;
 
-        // Agrupar por tipo (junta_directiva / delegado)
         const miembros = {
             juntaDirectiva: data.filter(m => m.grupo === 'junta_directiva'),
             delegados: data.filter(m => m.grupo === 'delegado')
@@ -25,3 +29,4 @@ export async function GET() {
         );
     }
 }
+
