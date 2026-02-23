@@ -1,0 +1,22 @@
+{
+  "name": "eseida-web",
+  "version": "1.0.0",
+  "description": "Web de la Delegación de Alumnos ESEIDA - ESEI",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.97.0",
+    "next": "^14.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.56.0",
+    "eslint-config-next": "^14.1.0"
+  }
+}
